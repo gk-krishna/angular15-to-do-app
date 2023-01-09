@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card-row">
+    <div class="card-header">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="card-body">
+      <app-task-form [taskList]="taskList"> </app-task-form>
+    </div>
+    <div class="card-body">
+      <app-task-list [tasks]="taskList">
+        <h2 *ngIf="taskList.length">Todo Task ({{ taskList.length }})</h2>
+        <h3 *ngIf="!taskList.length">No Task Available, | Create One...</h3>
+      </app-task-list>
+    </div>
+  </div>
+</div>
